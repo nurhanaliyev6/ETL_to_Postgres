@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: nurhan
+      POSTGRES_PASSWORD: nurhan123
+      POSTGRES_DB: green_taxi
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    networks:
+      - pg_network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8081:80"
+    networks:
+      - pg_network
+
+volumes:
+  postgres_data:
+
+networks:
+  pg_network:

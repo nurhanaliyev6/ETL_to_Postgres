@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Docker
+docker-compose.override.yml
+docker-compose.prod.yml
+Dockerfile.dev
+
+# PostgreSQL
+postgres_data/
+
+# Environment Variables
+.env
+
+# Log files
+*.log
+
+# Local configuration files
+*.local
