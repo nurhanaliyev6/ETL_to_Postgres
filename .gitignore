@@ -23,5 +23,3 @@ postgres_data/
 # Local configuration files
 *.local
 
-#csv files
-*.csv
